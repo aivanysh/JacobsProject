@@ -119,17 +119,17 @@ var apps = [
 
     var video = [
         { 
-          num: "1",
+          num: 0,
           header: "Визит",
           link: 'https://www.youtube.com/embed/xJKYZzjZ_vQ?enablejsapi=1',
         },
         {
-          num: "2",
+          num: 1,
           header: "Справочники",
           link: 'https://www.youtube.com/embed/lA8Y3tRxIg4?enablejsapi=1',
         },
         {
-          num: "3",
+          num: 2,
           header: "Эталонные координаты",
           link: 'https://www.youtube.com/embed/C6qMgUdaCqM?enablejsapi=1',
         }];

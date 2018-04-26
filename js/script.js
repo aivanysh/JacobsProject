@@ -168,12 +168,19 @@ function TAinst(){
 TAinst();
 
 /********video********/
-function chanel(el){
+function chanel(n){
+    var el = {};
+    for(i=0; i<video.length;i++){
+        if (i == video[n].num){
+            el = video[n];
+        }
+    }
+
     var elem = document.getElementsByClassName('videohold')[0];	
-  /*  var c = document.getElementsByClassName('videohold')[0].childNodes.length;
+    var c = document.getElementsByClassName('videohold')[0].childNodes.length;
     for(var i = 0; i<c; i++){
         elem.removeChild(elem.childNodes[0]);
-    }*/
+    }
 
     var header = document.createElement('h3');
     var headertext = document.createTextNode(el.header);
@@ -184,7 +191,9 @@ function chanel(el){
     youtube.setAttribute('src',el.link);
     youtube.setAttribute('class','yoto');
     youtube.setAttribute('frameborder','0');
-    youtube.setAttribute('allowfullscreen');
+    youtube.setAttribute('allowfullscreen','1');
+   elem.appendChild(youtube);
+
 }
 
 function videoload(){
@@ -196,7 +205,7 @@ function videoload(){
         var listelname = document.createTextNode(el.header);
         listel.appendChild(listelname);
         videolist.appendChild(listel);
-        listel.setAttribute('onclick','chanel('+el+')');
+        listel.setAttribute('onclick','chanel('+el.num+')');
         
 
     }

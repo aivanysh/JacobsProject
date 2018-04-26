@@ -1,4 +1,4 @@
-html, body {
+lihtml, body {
   height: 100%; }
 
 body {
@@ -204,17 +204,34 @@ main {
         margin: 30px 30px 30px 30px;
         padding-bottom: 20px; }
   main .video {
-    width: 100%;
+    width: 960px;
     border: 1px solid red;
     display: flex;
-    flex-direction: row; }
-    main .video .videolist {
-      border: 1px solid green;
-      width: 30%;
-      height: 100%; }
+    flex-direction: row;
+    margin: 0 auto;
+    background-color: #417083; }
+    main .video .videolisthold {
+      border: 1px solid #256a97;
+      width: 320px;
+      height: 640px; }
+      main .video .videolisthold .videolist {
+        width: 100%;
+        height: 100%;
+        border: 1px solid pink; }
+        main .video .videolisthold .videolist li {
+          width: 100%;
+          height: 10%;
+          font-size: 90%;
+          list-style-type: none; }
     main .video .videohold {
       border: 1px solid grey;
-      width: 30%;
+      width: 640px;
       height: 100%; }
+      main .video .videohold h3 {
+        margin: 2% 5% 0% 5%; }
+      main .video .videohold iframe {
+        width: 600px;
+        height: 500px;
+        margin: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
