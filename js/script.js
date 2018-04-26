@@ -20,6 +20,11 @@ function SlidesPrint(){
         sloganelement.appendChild(slogantext);
         textblock.appendChild(sloganelement);
 
+        var but = document.createElement('button');
+        var buttext = document.createTextNode('Перейти');
+        but.appendChild(buttext);
+        textblock.appendChild(but);
+
         var pushleft = document.createElement('a');
         var pushlefttext = document.createTextNode('<');
         pushleft.setAttribute('class', 'prev');
@@ -181,12 +186,12 @@ function chanel(n){
     for(var i = 0; i<c; i++){
         elem.removeChild(elem.childNodes[0]);
     }
-
+/*
     var header = document.createElement('h3');
     var headertext = document.createTextNode(el.header);
     header.appendChild(headertext);
     elem.appendChild(header);
-
+*/
     var youtube = document.createElement('iframe');
     youtube.setAttribute('src',el.link);
     youtube.setAttribute('class','yoto');
@@ -201,7 +206,7 @@ function videoload(){
         var videolist = document.getElementsByClassName('videolist')[0];
         var videohold = document.getElementsByClassName('videohold')[0];
 
-        var listel = document.createElement('li');
+        var listel = document.createElement('p');
         var listelname = document.createTextNode(el.header);
         listel.appendChild(listelname);
         videolist.appendChild(listel);
