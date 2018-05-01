@@ -5,7 +5,9 @@ body {
   font-family: Calibri, Arial, San-Serif;
   color: #777676;
   position: relative;
-  min-width: 960px; }
+  min-width: 960px;
+  margin: 0px;
+  padding: 0px; }
 
 a {
   text-decoration: none; }
@@ -67,7 +69,8 @@ main {
   main .slides {
     display: block;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    box-shadow: 0px -10px 18px #c4c3c3; }
   main .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -113,6 +116,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: absolute;
     width: 50%;
     height: 50%;
@@ -122,39 +126,51 @@ main {
     opacity: 0.5; }
     main .texthold p {
       text-align: center;
-      padding: 5% 5% 0% 5%;
-      font-size: 60px;
+      padding: 0% 5% 0% 5%;
+      font-size: 45px;
       opacity: 1;
       color: white;
+      margin: 0px;
       margin-bottom: 3%; }
-    main .texthold button {
+    main .texthold a {
       outline: none;
       color: white;
-      background-color: #993131;
+      text-align: center;
+      line-height: 1.5em;
+      background-color: red;
+      border: 1px solid red;
       opacity: 1;
       width: 15%;
-      height: 7%; }
-    main .texthold button:hover {
-      background-color: red; }
+      height: 7%;
+      cursor: pointer; }
+    main .texthold a:hover {
+      text-decoration: underline; }
   main .uslinks {
     margin: 0 auto;
     margin-top: 50px;
-    width: 90%;
+    width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    margin-bottom: 1%; }
     main .uslinks .uslink {
       cursor: pointer;
       width: 20%;
-      margin: 2%;
-      color: #777676; }
+      margin: 2.5%;
+      margin-bottom: 2%;
+      display: block;
+      color: #777676;
+      overflow: hidden;
+      text-overflow: ellipsis; }
       main .uslinks .uslink img {
         width: 100%;
-        height: 60%; }
+        height: 50%; }
       main .uslinks .uslink h3, main .uslinks .uslink p {
-        padding-right: 20px;
-        padding-left: 20px; }
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 100%;
+        line-height: 1em; }
     main .uslinks .uslink:hover {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   main .apps {
@@ -170,7 +186,8 @@ main {
         width: 15%;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         opacity: 0.85;
-        margin: 3%; }
+        margin: 3%;
+        color: #022c53; }
         main .apps .appsholder a img {
           width: 100%; }
       main .apps .appsholder a:hover {
@@ -185,14 +202,23 @@ main {
       padding-left: 10%; }
   main .instimghold {
     width: 100%;
-    height: 90%;
+    height: 100%;
     background-image: url("../img/puzzle.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    margin: 0px;
+    text-align: center; }
+    main .instimghold h3 {
+      padding: 5% 20% 20% 20%;
+      font-size: 45px;
+      margin: 0px;
+      /* color:rgb(65, 90, 110);*/
+      color: #727a81; }
   main .KKinstHold, main .TAinstHold {
     margin: 0 auto;
-    width: 70%; }
+    width: 70%;
+    margin-bottom: 5%; }
     main .KKinstHold h3, main .TAinstHold h3 {
       font-size: 30px;
       text-align: center; }
@@ -200,32 +226,36 @@ main {
       width: 100%;
       text-decoration: none;
       color: #4b7f97;
-      background-color: #e9f6fc;
+      background-color: #fafafa;
       display: block;
-      border-radius: 20px; }
+      border-bottom: 5px solid #6b98f3; }
       main .KKinstHold .KKinst h4, main .TAinstHold .KKinst h4 {
         font-size: 25px;
-        margin: 50px 30px 30px 30px;
+        margin: 40px 30px 25px 40px;
         padding-top: 20px; }
       main .KKinstHold .KKinst p, main .TAinstHold .KKinst p {
         font-size: 20px;
-        margin: 30px 30px 30px 30px;
+        margin: 20px 30px 25px 40px;
         padding-bottom: 20px; }
+    main .KKinstHold .KKinst:hover, main .TAinstHold .KKinst:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
     main .KKinstHold .TAinst, main .TAinstHold .TAinst {
       width: 100%;
       text-decoration: none;
       color: #4b7f97;
-      background-color: #e9f6fc;
+      background-color: #fafafa;
       display: block;
-      border-radius: 20px; }
+      border-bottom: 5px solid #6b98f3; }
       main .KKinstHold .TAinst h4, main .TAinstHold .TAinst h4 {
         font-size: 25px;
-        margin: 50px 30px 30px 30px;
+        margin: 40px 30px 25px 40px;
         padding-top: 20px; }
       main .KKinstHold .TAinst p, main .TAinstHold .TAinst p {
         font-size: 20px;
-        margin: 30px 30px 30px 30px;
+        margin: 20px 30px 25px 40px;
         padding-bottom: 20px; }
+    main .KKinstHold .TAinst:hover, main .TAinstHold .TAinst:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   main .video {
     margin: 0 auto;
     width: 960px;
@@ -241,9 +271,8 @@ main {
       color: white; }
       main .video .videolist p {
         display: block;
-        width: 100%;
         padding: 10px;
-        margin: 0; }
+        margin: 0px; }
       main .video .videolist p:hover {
         background-color: black; }
     main .video .yoto {

@@ -20,22 +20,23 @@ function SlidesPrint(){
         sloganelement.appendChild(slogantext);
         textblock.appendChild(sloganelement);
 
-        var but = document.createElement('button');
-        var buttext = document.createTextNode('Перейти');
+        var but = document.createElement('a');
+        var buttext = document.createTextNode(el.buttontext);
+        but.setAttribute('href',el.linc);            
         but.appendChild(buttext);
         textblock.appendChild(but);
 
         var pushleft = document.createElement('a');
         var pushlefttext = document.createTextNode('<');
         pushleft.setAttribute('class', 'prev');
-        pushleft.setAttribute('onclick', 'plusSlides(-1)');
+        pushleft.setAttribute('onclick', 'minusSlides()');
         pushleft.appendChild(pushlefttext);
         slideblock.appendChild(pushleft);
 
         var pushright = document.createElement('a');
         var pushrightext = document.createTextNode('>');
         pushright.setAttribute('class', 'next');
-        pushright.setAttribute('onclick', 'plusSlides(-1)');
+        pushright.setAttribute('onclick', 'plusSlides()');
         pushright.appendChild(pushrightext);
         slideblock.appendChild(pushright);
 
@@ -152,6 +153,11 @@ function TAinst(){
         parent.appendChild(instblock);
         instblock.setAttribute('href',el.file);
         instblock.setAttribute('class','TAinst');
+/*
+        var instimg = document.createElement('img');
+        instimg.setAttribute('src','img/pdf.png');
+        parent.appendChild(instimg);
+*/
 
         var insth = document.createElement('h4');
         var insthtext = document.createTextNode(el.header);
@@ -173,14 +179,29 @@ function TAinst(){
 TAinst();
 
 /********video********/
-function chanel(n){
+function stylech(el){
+    var elem = document.getElementsByClassName('videolistel')[0];
+    for(i=0; i<elem.length; i++){
+        elem[i].style.backgroundcolor = 'rgb(45, 60, 65)'
+    }	
+    el.style.backgroundcolor = 'black';
+}
+
+function chanel(n,listel){
+    
+    var list = document.getElementsByClassName('videolistel');	
+    for(j=0; j<list.length; j++){
+        list[j].style.backgroundColor = 'rgb(45, 60, 65)';
+    }
+    listel.style.backgroundColor = 'black';
+
     var el = {};
     for(i=0; i<video.length;i++){
         if (i == video[n].num){
             el = video[n];
         }
     }
-
+    
     var elem = document.getElementsByClassName('videohold')[0];	
     var c = document.getElementsByClassName('videohold')[0].childNodes.length;
     for(var i = 0; i<c; i++){
@@ -209,8 +230,10 @@ function videoload(){
         var listel = document.createElement('p');
         var listelname = document.createTextNode(el.header);
         listel.appendChild(listelname);
+        listel.setAttribute('class','videolistel')
         videolist.appendChild(listel);
-        listel.setAttribute('onclick','chanel('+el.num+')');
+        listel.setAttribute('onclick','chanel('+el.num+',this)');
+      /*  listel.setAttribute('onclick','stylech(this)');*/
         
 
     }
@@ -220,7 +243,8 @@ function videoload(){
     }
 }
 videoload();
-chanel(0);
+var listelfirst = document.getElementsByClassName('videolistel')[0];
+chanel(0,listelfirst);
 
 
 /**********slideshov*********/
@@ -229,7 +253,7 @@ var myIndex = 0;
 var myVar;
 carousel(0);
 
-function carousel(i) {
+function carousel() {
     var x = document.getElementsByClassName("imghold");
     for (i=0; i < x.length; i++) {
        x[i].style.display = "none";  
@@ -237,11 +261,23 @@ function carousel(i) {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
     x[myIndex-1].style.display = "block";  
-    myVar = setTimeout(carousel, 50000000); // Change image every 2 seconds
+    myVar = setTimeout(carousel, 10000); // Change image every 2 seconds
 }
-function plusSlides(n) {
+function plusSlides() {
     clearTimeout(myVar);
-    carousel(myIndex += n);
+    carousel(myIndex+1);
+  }
+function minusSlides() {
+    var x = document.getElementsByClassName("imghold");
+    for (i=0; i < x.length; i++) {
+        x[i].style.display = "none";  
+     }
+     myIndex--;
+     if (myIndex <= 0) {myIndex = x.length-1; console.log(myIndex)}    
+     x[myIndex].style.display = "block"; 
+     console.log(myIndex);
+    clearTimeout(myVar);
+    carousel(myIndex-1);
   }
 /*
 document.getElementsByClassName('slides')[0].style.display = 'none';
@@ -249,5 +285,20 @@ document.getElementsByClassName('uslinks')[0].style.display = 'none';
 document.getElementsByClassName('foo')[0].style.display = 'none';
 */
 /*****************Instructions********************************/
+document.getElementsByClassName('instructions')[0].style.display = 'none';
+function mainpaint(){
+    document.getElementsByClassName('slides')[0].style.display = 'block';
+    document.getElementsByClassName('uslinks')[0].style.display = 'flex'; 
+    document.getElementsByClassName('apps')[0].style.display = 'block';
+    document.getElementsByClassName('instructions')[0].style.display = 'none';
 
+}
+
+function manualpaint(){
+    document.getElementsByClassName('slides')[0].style.display = 'none';
+    document.getElementsByClassName('uslinks')[0].style.display = 'none'; 
+    document.getElementsByClassName('apps')[0].style.display = 'none';
+    document.getElementsByClassName('instructions')[0].style.display = 'block';
+
+}
 

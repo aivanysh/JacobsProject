@@ -6,6 +6,8 @@ body{
     color: rgb(119, 118, 118);
     position: relative;
     min-width:960px;
+    margin:0px;
+    padding:0px;
 }
 a {
     text-decoration: none;
@@ -86,6 +88,7 @@ main{
         display:block;
         width:100%;
         height:100%;
+        box-shadow: 0px -10px 18px rgb(196, 195, 195);
     }
 
     .fade {
@@ -142,6 +145,7 @@ main{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         position: absolute;
         width: 50%;
         height:50%;
@@ -151,46 +155,58 @@ main{
         opacity: 0.5;
         p{
             text-align: center;
-            padding:5% 5% 0% 5%;
-            font-size: 60px;
+            padding:0% 5% 0% 5%;
+            font-size: 45px;
             opacity:1;
             color:white;
+            margin:0px;
             margin-bottom: 3%;
         }
-        button{
+        a{
             outline: none;
             color:white;
-            background-color: rgb(153, 49, 49);
+            text-align: center;
+            line-height: 1.5em;
+            background-color: red;
+            border:1px solid red;
             opacity: 1;
             width:15%;
             height:7%;
+            cursor: pointer;
         }
-        button:hover{
-            background-color: red;
+        a:hover{
+            text-decoration: underline;
         }
     }
 
     .uslinks{
         margin: 0 auto;
         margin-top: 50px;
-        width:90%;
+        width:95%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin-bottom: 1%;
         .uslink{
             cursor: pointer;            
             width:20%;
-            margin:2%;
-            
+            margin:2.5%;
+            margin-bottom: 2%;
+            display: block;
             color: rgb(119, 118, 118);
+            overflow: hidden;
+            text-overflow: ellipsis; 
+            
             img{
                 width:100%;
-                height:60%;
+                height:50%;
             }
              h3, p{
-                padding-right:20px;
-                padding-left:20px;
+                padding-right:10px;
+                padding-left:10px;
+                font-size: 100%;
+                line-height: 1em;
             }
         }
         .uslink:hover {
@@ -212,6 +228,7 @@ main{
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 opacity: 0.85;
                 margin:3%;
+                color:rgb(2, 44, 83);
                 img{
                     width:100%;
                 }
@@ -234,15 +251,26 @@ main{
     }
     .instimghold{
         width:100%;
-        height:90%;
+        height:100%;
         background-image: url('../img/puzzle.jpg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         margin-bottom:20px;
+        margin: 0px;
+        text-align: center;  
+        h3{
+            padding:5% 20% 20% 20% ;
+            font-size: 45px;
+            margin:0px;
+           /* color:rgb(65, 90, 110);*/
+           color: rgb(114, 122, 129);
+            
+        }
     }
     .KKinstHold, .TAinstHold{
         margin:0 auto;
         width:70%;
+        margin-bottom:5%;
         h3{
             font-size: 30px;
             text-align: center;
@@ -251,37 +279,44 @@ main{
             width:100%;
             text-decoration: none;
             color: rgb(75, 127, 151);
-            background-color: rgb(233, 246, 252);
+            background-color: rgb(250, 250, 250);
             display: block;
-            border-radius: 20px;
+            border-bottom:5px solid rgb(107, 152, 243);
            h4{
                 font-size: 25px;
-                margin:50px 30px 30px 30px;
+                margin:40px 30px 25px 40px;
                 padding-top:20px;
             }
             p{
                 font-size: 20px;
-                margin:30px 30px 30px 30px;
+                margin:20px 30px 25px 40px;
                 padding-bottom:20px;
             }
+        }
+        .KKinst:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .TAinst{
             width:100%;
             text-decoration: none;
             color: rgb(75, 127, 151);
-            background-color: rgb(233, 246, 252);
+            background-color: rgb(250, 250, 250);
             display: block;
-            border-radius: 20px;
+            border-bottom:5px solid rgb(107, 152, 243);
+            
            h4{
                 font-size: 25px;
-                margin:50px 30px 30px 30px;
+                margin:40px 30px 25px 40px;
                 padding-top:20px;
             }
             p{
                 font-size: 20px;
-                margin:30px 30px 30px 30px;
+                margin:20px 30px 25px 40px;
                 padding-bottom:20px;
             }
+        }
+        .TAinst:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
     }
@@ -300,10 +335,9 @@ main{
             color: white;
             p{
                 display:block;
-                width:100%;
                 padding:10px;
-                margin:0;
-
+                margin:0px;
+                
             }
             p:hover{
                 background-color: black;

@@ -1,15 +1,21 @@
 var slides = [
     {
       slogan: "SalesWorhs - solution for mobile sales.",
-      background:"img/instbook.jpeg"
+      background:"img/instbook.jpeg",
+      buttontext:'Перейти',
+      link:'https://docs.google.com/spreadsheets/d/1UN3F5nt42MiH0duVvpfQpWkgMsnuR2q9zrnE7OkxAbw/edit'
     },
     {
       slogan: "SoftServe Business SYstems- the company.",
-       background:"img/MK.jpeg"
+       background:"img/MK.jpeg",
+       buttontext:'Перейти',
+       link:'https://docs.google.com/spreadsheets/d/1UN3F5nt42MiH0duVvpfQpWkgMsnuR2q9zrnE7OkxAbw/edit'
     },
     {
       slogan: "SalesWorhs - bls bla bla bla.",
-      background:"img/ssbs.jpg"
+      background:"img/ssbs.jpg",
+      buttontext:'Перейти',
+      link:'https://docs.google.com/spreadsheets/d/1UN3F5nt42MiH0duVvpfQpWkgMsnuR2q9zrnE7OkxAbw/edit'
     }];
 
 var uslinks = [
@@ -22,7 +28,7 @@ var uslinks = [
   {
     picture: "img/recommended3.jpeg",
     header: 'Список рекомендованиих пристроїів',
-    text: 'Сервіс дозволяє зареєструвати запит чи інцидент по роботі з програмою.',
+    text: 'Сервіс дозволяє зареєструвати запит чи інцидент по роботі з програмою Сервіс дозволяє зареєструвати запит чи інцидент по роботі з програмою.',
     link:'https://docs.google.com/spreadsheets/d/1UN3F5nt42MiH0duVvpfQpWkgMsnuR2q9zrnE7OkxAbw/edit'
   },
   {
@@ -66,19 +72,19 @@ var uslinks = [
 var apps = [
   {
     picture: "img/MMULogo.png",
-    header: 'SalesWorks® Installer',
+    header: 'SalesWorks® Installer 2.63.01',
     text: 'SoftServe Business Systems',
     link:'https://play.google.com/store/apps/details?id=com.swe.ssbs.sweloader'
   },
   {
     picture: "img/MMULogo.png",
-    header: 'SalesWorks® Installer',
+    header: 'SalesWorks® Installer 2.63.01',
     text: 'SoftServe Business Systems',
     link:'https://play.google.com/store/apps/details?id=com.swe.ssbs.sweloader'
   },
   {
     picture: "img/MMULogo.png",
-    header: 'SalesWorks® Installer',
+    header: 'SalesWorks® Installer 2.63.01',
     text: 'SoftServe Business Systems',
     link:'https://play.google.com/store/apps/details?id=com.swe.ssbs.sweloader'
   }];
