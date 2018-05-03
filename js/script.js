@@ -301,4 +301,9 @@ function manualpaint(){
     document.getElementsByClassName('instructions')[0].style.display = 'block';
 
 }
-
+/*
+var foo = document.getElementsByClassName('test')[0];
+var foodiv = document.createElement('p');
+var footext = document.createTextNode('toooooooooo');
+foodiv.appendChild(footext);
+foo.appendChild(foodiv);*/
