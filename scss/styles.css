@@ -5,7 +5,7 @@
   body {
     font-family: Calibri, Arial, San-Serif;
     color: #777676;
-    min-width: 960px;
+    min-width: 1240px;
     margin: 0px;
     padding: 0px; }
 
@@ -64,18 +64,19 @@
 
   main {
     width: 100%;
-    height: calc(100% - 100px);
+    /* height:calc(100% - 100px);*/
     /* Position the "next button" to the right */ }
     main .slides {
       display: block;
       width: 100%;
-      height: 100%;
-      box-shadow: 0px -10px 18px #c4c3c3; }
+      /* height:100%;*/
+      box-shadow: 0px -10px 18px #c4c3c3;
+      height: calc(100vh - 100px); }
     main .fade {
       -webkit-animation-name: fade;
       -webkit-animation-duration: 1.5s;
       animation-name: fade;
-      animation-duration: 1.5s; }
+      animation-duration: 5s; }
   @-webkit-keyframes fade {
     from {
       opacity: .4; }
@@ -157,6 +158,7 @@
       main .uslinks .uslink {
         cursor: pointer;
         width: 20%;
+        max-width: 280px;
         margin: 2.5%;
         margin-bottom: 2%;
         display: block;
@@ -202,8 +204,10 @@
         padding-left: 10%; }
     main .instimghold {
       width: 100%;
-      height: 100%;
-      background-image: url("../img/puzzle.jpg");
+      /* height:100%;*/
+      height: calc(100vh - 100px);
+      box-shadow: 0px -12px 18px #eeeded;
+      background-image: url("../img/puzzle2.jpg");
       background-size: 100% 100%;
       background-repeat: no-repeat;
       margin-bottom: 20px;
@@ -294,15 +298,11 @@
 
   footer {
     color: red; } }
-@media (max-width: 960px) {
-  .jaclogo {
-    display: none; }
+@media screen and (min-width: 575px) and (max-width: 1240px) {
+  .instimghold {
+    height: calc(50vh - 100px); }
 
-  .slides {
-    display: none !important; }
-
-  nav {
-    flex-direction: column;
-    display: block; } }
+  .uslink {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -207,12 +207,7 @@ function chanel(n,listel){
     for(var i = 0; i<c; i++){
         elem.removeChild(elem.childNodes[0]);
     }
-/*
-    var header = document.createElement('h3');
-    var headertext = document.createTextNode(el.header);
-    header.appendChild(headertext);
-    elem.appendChild(header);
-*/
+
     var youtube = document.createElement('iframe');
     youtube.setAttribute('src',el.link);
     youtube.setAttribute('class','yoto');
@@ -261,7 +256,7 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
     x[myIndex-1].style.display = "block";  
-    myVar = setTimeout(carousel, 10000); // Change image every 2 seconds
+    myVar = setTimeout(carousel, 5000); // Change image every 2 seconds
 }
 function plusSlides() {
     clearTimeout(myVar);
@@ -279,11 +274,7 @@ function minusSlides() {
     clearTimeout(myVar);
     carousel(myIndex-1);
   }
-/*
-document.getElementsByClassName('slides')[0].style.display = 'none';
-document.getElementsByClassName('uslinks')[0].style.display = 'none';
-document.getElementsByClassName('foo')[0].style.display = 'none';
-*/
+
 /*****************Instructions********************************/
 document.getElementsByClassName('instructions')[0].style.display = 'none';
 function mainpaint(){
@@ -301,9 +292,3 @@ function manualpaint(){
     document.getElementsByClassName('instructions')[0].style.display = 'block';
 
 }
-/*
-var foo = document.getElementsByClassName('test')[0];
-var foodiv = document.createElement('p');
-var footext = document.createTextNode('toooooooooo');
-foodiv.appendChild(footext);
-foo.appendChild(foodiv);*/
