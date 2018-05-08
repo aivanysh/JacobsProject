@@ -21,20 +21,21 @@ function SlidesPrint(){
         textblock.appendChild(sloganelement);
 
         var but = document.createElement('a');
+        but.setAttribute('target','_blank');
         var buttext = document.createTextNode(el.buttontext);
-        but.setAttribute('href',el.linc);            
+        but.setAttribute('href',el.link);            
         but.appendChild(buttext);
         textblock.appendChild(but);
 
         var pushleft = document.createElement('a');
-        var pushlefttext = document.createTextNode('<');
+        var pushlefttext = document.createTextNode("◄");
         pushleft.setAttribute('class', 'prev');
         pushleft.setAttribute('onclick', 'minusSlides()');
         pushleft.appendChild(pushlefttext);
         slideblock.appendChild(pushleft);
 
         var pushright = document.createElement('a');
-        var pushrightext = document.createTextNode('>');
+        var pushrightext = document.createTextNode('►');
         pushright.setAttribute('class', 'next');
         pushright.setAttribute('onclick', 'plusSlides()');
         pushright.appendChild(pushrightext);
@@ -56,6 +57,7 @@ function LinksPrint(){
         var parent = document.getElementsByClassName('uslinks')[0];
         
         var linkblock = document.createElement('a');
+        linkblock.setAttribute('target','_blank');
         linkblock.setAttribute('class','uslink');
         linkblock.setAttribute('href',el.link);
 
@@ -89,6 +91,7 @@ function AppsPrint(){
         var parent = document.getElementsByClassName('appsholder')[0];
         
         var appblock = document.createElement('a');
+        appblock.setAttribute('target','_blank');
         appblock.setAttribute('href',el.link);
         
         var appimg =  document.createElement('img');
@@ -121,19 +124,29 @@ function KKinst(){
         var parent = document.getElementsByClassName('KKinstHold')[0];
         
         var instblock = document.createElement('a');
+        instblock.setAttribute('target','_blank');
         parent.appendChild(instblock);
         instblock.setAttribute('href',el.file);
         instblock.setAttribute('class','KKinst');
 
+        var instimg = document.createElement('img');
+        var textblock = document.createElement('div');
+        instblock.appendChild(instimg);
+        instblock.appendChild(textblock);
+        instimg.setAttribute('src','img/pdf.png')
+
+
         var insth = document.createElement('h4');
         var insthtext = document.createTextNode(el.header);
         insth.appendChild(insthtext);
-        instblock.appendChild(insth);
+      /*  instblock.appendChild(insth);*/
+      textblock.appendChild(insth);
 
         var instp = document.createElement('p');
         var instptext = document.createTextNode(el.description);
         instp.appendChild(instptext);
-        instblock.appendChild(instp);
+       /* instblock.appendChild(instp);*/
+       textblock.appendChild(instp);
 
 
     }
@@ -150,6 +163,7 @@ function TAinst(){
         var parent = document.getElementsByClassName('TAinstHold')[0];
         
         var instblock = document.createElement('a');
+        instblock.setAttribute('target','_blank');
         parent.appendChild(instblock);
         instblock.setAttribute('href',el.file);
         instblock.setAttribute('class','TAinst');
@@ -256,23 +270,24 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
     x[myIndex-1].style.display = "block";  
-    myVar = setTimeout(carousel, 5000); // Change image every 2 seconds
+    myVar = setTimeout(carousel, 5000); // Change image every 5 seconds
+}
+function carousel2() {
+    var x = document.getElementsByClassName("imghold");
+    for (i=0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex--;
+    if (myIndex == 0) {myIndex = x.length}    
+    x[myIndex-1].style.display = "block";  
 }
 function plusSlides() {
     clearTimeout(myVar);
-    carousel(myIndex+1);
+    carousel();
   }
 function minusSlides() {
-    var x = document.getElementsByClassName("imghold");
-    for (i=0; i < x.length; i++) {
-        x[i].style.display = "none";  
-     }
-     myIndex--;
-     if (myIndex <= 0) {myIndex = x.length-1; console.log(myIndex)}    
-     x[myIndex].style.display = "block"; 
-     console.log(myIndex);
     clearTimeout(myVar);
-    carousel(myIndex-1);
+    carousel2();
   }
 
 /*****************Instructions********************************/

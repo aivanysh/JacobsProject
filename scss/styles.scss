@@ -174,7 +174,9 @@
                 background-color: red;
                 border:1px solid red;
                 opacity: 1;
-                width:15%;
+                /*width:15%;*/
+                padding-left:10px;
+                padding-right:10px;
                 height:7%;
                 cursor: pointer;
             }
@@ -202,7 +204,8 @@
                 color: rgb(119, 118, 118);
                 overflow: hidden;
                 text-overflow: ellipsis; 
-                
+                text-align: justify;
+                /*border:2px solid rgb(233, 232, 232);*/
                 img{
                     width:100%;
                     height:50%;
@@ -212,6 +215,7 @@
                     padding-left:10px;
                     font-size: 100%;
                     line-height: 1em;
+                    
                 }
             }
             .uslink:hover {
@@ -287,17 +291,22 @@
                 text-decoration: none;
                 color: rgb(75, 127, 151);
                 background-color: rgb(250, 250, 250);
-                display: block;
+                display: flex;
+                align-items: center;
                 border-bottom:5px solid rgb(107, 152, 243);
-            h4{
+                margin-bottom:20px;
+                h4{
                     font-size: 25px;
-                    margin:40px 30px 25px 40px;
+                    margin:20px 30px 25px 20px;
                     padding-top:20px;
                 }
                 p{
                     font-size: 20px;
                     margin:20px 30px 25px 40px;
                     padding-bottom:20px;
+                }
+                img{
+                    height:100px;
                 }
             }
             .KKinst:hover{
