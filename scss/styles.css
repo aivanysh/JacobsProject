@@ -256,16 +256,20 @@
         text-decoration: none;
         color: #4b7f97;
         background-color: #fafafa;
-        display: block;
-        border-bottom: 5px solid #6b98f3; }
+        display: flex;
+        align-items: center;
+        border-bottom: 5px solid #6b98f3;
+        margin-bottom: 20px; }
         main .KKinstHold .TAinst h4, main .TAinstHold .TAinst h4 {
           font-size: 25px;
-          margin: 40px 30px 25px 40px;
+          margin: 20px 30px 25px 20px;
           padding-top: 20px; }
         main .KKinstHold .TAinst p, main .TAinstHold .TAinst p {
           font-size: 20px;
           margin: 20px 30px 25px 40px;
           padding-bottom: 20px; }
+        main .KKinstHold .TAinst img, main .TAinstHold .TAinst img {
+          height: 100px; }
       main .KKinstHold .TAinst:hover, main .TAinstHold .TAinst:hover {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
     main .video {

@@ -167,21 +167,25 @@ function TAinst(){
         parent.appendChild(instblock);
         instblock.setAttribute('href',el.file);
         instblock.setAttribute('class','TAinst');
-/*
+
         var instimg = document.createElement('img');
-        instimg.setAttribute('src','img/pdf.png');
-        parent.appendChild(instimg);
-*/
+        var textblock = document.createElement('div');
+        instblock.appendChild(instimg);
+        instblock.appendChild(textblock);
+        instimg.setAttribute('src','img/pdf.png')
+
 
         var insth = document.createElement('h4');
         var insthtext = document.createTextNode(el.header);
         insth.appendChild(insthtext);
-        instblock.appendChild(insth);
+      /*  instblock.appendChild(insth);*/
+      textblock.appendChild(insth);
 
-        var instp = document.createElement('p');
-        var instptext = document.createTextNode(el.description);
-        instp.appendChild(instptext);
-        instblock.appendChild(instp);
+      var instp = document.createElement('p');
+      var instptext = document.createTextNode(el.description);
+      instp.appendChild(instptext);
+     /* instblock.appendChild(instp);*/
+     textblock.appendChild(instp);
 
 
     }
