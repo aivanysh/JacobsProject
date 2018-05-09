@@ -190,8 +190,8 @@ function TAinst(){
 
     }
 
-    for(i=0; i<kkinst.length;i++){
-        TAInstaPaint(kkinst[i]);
+    for (i=0; i<tainst.length;i++){
+        TAInstaPaint(tainst[i]);
     }
 }
 TAinst();

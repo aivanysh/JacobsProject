@@ -6,7 +6,7 @@ var slides = [
       link:'http://helpsw.datacenter.ssbs.com.ua/SWEDocs/SWE/'
     },
     {
-      slogan: "SoftServe BusinessSystems - ознакомтесть с новостями компании на официальном сайте.",
+      slogan: "SoftServe Business Systems - ознакомтесть с новостями компании на официальном сайте.",
        background:"img/ssbs.jpg",
        buttontext:'Перейти',
        link:'https://www.softservebs.com/uk/index-ua/'
@@ -67,37 +67,39 @@ var apps = [
 
   var kkinst = [
     {
-      header: "Инструкция по работе с справочником продукции",
-      description: 'Описание заведения и редактирования продукции',
-      file: 'instructions/Send_MBD.pdf',
+      header: "Индивидуальная сортировка товаров",
+      description: 'Инструкция описывает настройки НБД, которые необходимо осуществить для возможности индивидуального сортировки позиций.',
+      file: 'instructions/Individual_product_sorting.pdf',
     },
     {
-      header: "Инструкция по работе с справочником продукции",
-      description: 'Описание заведения и редактирования продукции',
-      file: 'instructions/Send_MBD.pdf',
-    },
-    {
-      header: "Инструкция по работе с справочником продукции",
-      description: 'Описание заведения и редактирования продукции',
-      file: 'instructions/Send_MBD.pdf',
-    }];
+      header: "Настройка расписания синхронизаций НБД с ЦБД",
+      description: 'Описание процесса настройки автоматической синхронизаии с центральным модулем.',
+      file: 'instructions/Configure_synchronization_schedule.pdf',
+    }
+  ];
 
-    var TAinst = [
+    var tainst = [
       {
-        header: "Инструкция по работе с справочником продукции",
-        description: 'Описание заведения и редактирования продукции',
+        header: "Обновление SalesWorks на КПК",
+        description: 'Инструкция описывает методы обновления версии мобильного модуля.',
+        file: 'instructions/SalesWorks_Update_MDB.pdf',
+      },
+      {
+        header: "Удаление БД на КПК",
+        description: 'Инструкция описывает процесс удаления мобильной базы данных и заливка новой при синхронизации.',
+        file: 'instructions/RebuildMBD.pdf',
+      },
+      {
+        header: "Отправка БД КПК",
+        description: 'В некоторых случаях консультант службы поддержки может запросить копию мобильной базы данных для проведения исследования в рамках запроса. Инструкция описывает один из методов отправления базы данных.',
         file: 'instructions/Send_MBD.pdf',
       },
       {
-        header: "Инструкция по работе с справочником продукции",
-        description: 'Описание заведения и редактирования продукции',
-        file: 'instructions/Send_MBD.pdf',
-      },
-      {
-        header: "Инструкция по работе с справочником продукции",
-        description: 'Описание заведения и редактирования продукции',
-        file: 'instructions/Send_MBD.pdf',
-      }];
+        header: "Сброс к заводским настройкам.",
+        description: 'Назначеним ПО и осуществлены настройки иногда могут препятствовать работе программы SalesWorks. В таких случаях может быть предложено вернуть состояние КПК к заводским настройкам. Этот процесс описан в инструкции на примере бренда Samsung.',
+        file: 'instructions/HardReset_Samsung_smt231.pdf',
+      }
+    ];
 
     var video = [
         { 
@@ -114,4 +116,20 @@ var apps = [
           num: 2,
           header: "Эталонные координаты",
           link: 'https://www.youtube.com/embed/C6qMgUdaCqM?enablejsapi=1',
-        }];
+        },
+        {
+          num: 3,
+          header: "Задание",
+          link: 'https://www.youtube.com/embed/nFISoFUwsaI?enablejsapi=1',
+        },
+        {
+          num: 4,
+          header: "Отчеты",
+          link: 'https://www.youtube.com/embed/J7jJuo3Zbec?enablejsapi=1',
+        },
+        {
+          num: 5,
+          header: "Фото",
+          link: 'https://www.youtube.com/embed/ITo4hvUMVPQ?enablejsapi=1',
+        },
+      ];
