@@ -307,9 +307,6 @@ main {
   .foo .contacts {
     width: 220px; }
 
-footer {
-  color: red; }
-
 /*
 }
 @media screen and (min-width: 575px) and (max-width: 1240px){
